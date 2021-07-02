@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enviar Parámetros</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Enviar parámetros</h1>
+
+    <ul>
+      <li><a th:href="@{/params/string(text='Hello Rubén')}">/params/string?text=Hello Rubén</a></li>
+      <li><a th:href="@{/params/string(text='Que tal...')}">/params/string?text=Que tal...</a></li>
+      <li><a th:href="@{/params/mix-params(text='Que tal...', number=20)}">/params/mix-params?text=Que tal...&number=20</a></li>
+      <li><a th:href="@{/params/mix-params-request(greting='Que tal...', number=20)}">/params/mix-params-request?text=Que tal...&number=20</a></li>
+    </ul>
+  </body>
+</html>
